@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+
+    <name>Recoilless Rifle (Continued)</name>
+  	<packageId>Mlie.RecoillessRifle</packageId>
+	<author>match_milk</author>
+	<url>https://github.com/emipa606/RecoillessRifle</url>
+	<supportedVersions>
+		<li>1.1</li>
+	</supportedVersions>
+	<modDependencies />
+	<loadAfter />
+	<description>Update of match_milks mod for RimWorld 1.1
+https://steamcommunity.com/sharedfiles/filedetails/?id=1279933594
+
+[img]https://raw.githubusercontent.com/emipa606/RimWorld-Wrapper/master/Notice.png[/img]
+
+Support-chat:
+https://invite.gg/mlie
+
+Non-steam version:
+https://github.com/emipa606/RecoillessRifle
+	
+--- Original Description ---
+adds a recoilless rifle turret that can shoot various shell. you can build it after you research mortar.
+
+[Recoilless rifle]
+: Need to be manned.
+: Can't fire over wall.
+: Low muzzle velocity.
+: Build cost : 100 Steel , 3 Components.
+
+--------------------------------Ammunition-----------------------------------------------------
+[High Explosive Shell] : An ordinary HE shell that explodes on hit.
+
+[Cluster Bomb Shell] : A cluster bomb that contain 8 bomblets for wide area of effect.
+
+[Cluster Incendiary Shell] : A cluster bomb that contain 20 small incendiary bomb
+
+[HEAT Shell] : high explosive anti tank. Deals extra damage on direct shot.
+
+[Canister Shot Shell] : A shotgun shell filled with 100 pellets. The pellets disperse at long distance.
+
+[Shrapnel Shot Shell] : A canister shot with a timed fuse. Same bullet dispersion at any distance.
+
+[WP Smoke Shell] : A smoke shell that pop smoke upon impact. Hit chance of bullets path through
+smoke is reduced 70%. Can be used to burn people as well.
+
+[EMP Shel] : An EMP shell.
+
+[AP shell] : Simple armor piercing shell.
+
+[APDS shell] : Sabot round. higher armor penetration.
+-------------------------------------Compatiblity-----------------------------------------------------
+not compatible Combat extended
+compatible with most of other mods and exisitent save data.</description>
+
+</ModMetaData>
