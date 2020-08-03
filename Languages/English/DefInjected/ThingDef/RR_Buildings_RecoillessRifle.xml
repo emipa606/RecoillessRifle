@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <RR_Turret_RecoillessRifle.label>recoilless rifle</RR_Turret_RecoillessRifle.label>
+  <RR_Turret_RecoillessRifle.description>A recoilless rifle that launches all kinds of shells. Must be manned. Cannot fire over wall. Explodes when damaged.</RR_Turret_RecoillessRifle.description>
+
+
+  <!-- Mortar turret -->
+
+  <Artillery_RecoillessRifle.label>recoilless rifle</Artillery_RecoillessRifle.label>
+  <Artillery_RecoillessRifle.description>recoilless rifle .</Artillery_RecoillessRifle.description>
+
+
+</LanguageData>

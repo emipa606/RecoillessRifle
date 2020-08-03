@@ -1,11 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <ThingDef ParentName="BuildingBase">
-	<defName>RR_Turret_RecoillessRifle</defName>
+    <defName>RR_Turret_RecoillessRifle</defName>
     <label>recoilless rifle</label>
     <description>A recoilless rifle that launches all kinds of shells. Must be manned. Cannot fire over wall. Explodes when damaged.</description>
-	<thingClass>RecoillessRifle.Building_TurretGunCustom</thingClass>
-	<graphicData>
+    <thingClass>RecoillessRifle.Building_TurretGunCustom</thingClass>
+    <graphicData>
       <texPath>Things/Building/Security/TurretMini_Base</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(2.5,2.5)</drawSize>
@@ -22,9 +22,9 @@
     <hasInteractionCell>True</hasInteractionCell>
     <interactionCellOffset>(0,0,-1)</interactionCellOffset>
     <stealable>false</stealable>
-	<rotatable>true</rotatable>
-      <size>(1,1)</size>
-	<statBases>
+    <rotatable>true</rotatable>
+    <size>(1,1)</size>
+    <statBases>
       <MaxHitPoints>280</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <WorkToBuild>1900</WorkToBuild>
@@ -41,49 +41,44 @@
     <tickerType>Normal</tickerType>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <designationCategory>Security</designationCategory>
-		<costStuffCount>50</costStuffCount>
-		<costList>
-			<Steel>100</Steel>
-			<ComponentIndustrial>3</ComponentIndustrial>
-		</costList>
+    <costStuffCount>50</costStuffCount>
+    <costList>
+      <Steel>100</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
     <inspectorTabs>
       <li>ITab_Shells</li>
     </inspectorTabs>
     <comps>
-      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Forbiddable" />
       <li Class="CompProperties_Mannable">
         <manWorkType>Violent</manWorkType>
       </li>
-	  <li Class="RecoillessRifle.CompProperties_TurretTopSize">
+      <li Class="RecoillessRifle.CompProperties_TurretTopSize">
         <topSize>(1.0,1.0,1.7)</topSize>
       </li>
-	  <li Class="CompProperties_Explosive">
+      <li Class="CompProperties_Explosive">
         <explosiveRadius>2.9</explosiveRadius>
         <explosiveDamageType>Bomb</explosiveDamageType>
       </li>
-	 
-    </comps>     
-    
+    </comps>
     <building>
-		<turretGunDef>Artillery_RecoillessRifle</turretGunDef>
-		<turretBurstWarmupTime>6.5</turretBurstWarmupTime>
-		<turretBurstCooldownTime>2.0</turretBurstCooldownTime>
-    
-		<buildingTags>
-       	<li>Artillery</li>
-		</buildingTags>
-	</building>
-	
+      <turretGunDef>Artillery_RecoillessRifle</turretGunDef>
+      <turretBurstWarmupTime>6.5</turretBurstWarmupTime>
+      <turretBurstCooldownTime>2.0</turretBurstCooldownTime>
+      <buildingTags>
+        <li>Artillery</li>
+      </buildingTags>
+    </building>
     <researchPrerequisites>
       <li>Mortars</li>
     </researchPrerequisites>
   </ThingDef>
-
   <ThingDef Name="RR_BaseCannonWeapon" Abstract="True">
     <category>Item</category>
     <thingClass>ThingWithComps</thingClass>
-	<!--thingClass>RecoillessRifle.Cannon</thingClass-->
-        <label>artillery error</label>
+    <!--thingClass>RecoillessRifle.Cannon</thingClass-->
+    <label>artillery error</label>
     <useHitPoints>false</useHitPoints>
     <equipmentType>Primary</equipmentType>
     <tickerType>Never</tickerType>
@@ -116,13 +111,9 @@
         </filter>
       </defaultStorageSettings>
     </building>
-	<designationHotKey>Misc3</designationHotKey>
-    
+    <designationHotKey>Misc3</designationHotKey>
   </ThingDef>
-
   <!--=============== Mortar turret ===============-->
- 
-  
   <ThingDef ParentName="RR_BaseCannonWeapon">
     <defName>Artillery_RecoillessRifle</defName>
     <label>recoilless rifle</label>
@@ -130,7 +121,7 @@
     <weaponTags>
       <li>Artillery_BaseDestroyer</li>
     </weaponTags>
-	 <statBases>
+    <statBases>
       <AccuracyTouch>0.80</AccuracyTouch>
       <AccuracyShort>0.99</AccuracyShort>
       <AccuracyMedium>0.93</AccuracyMedium>
@@ -143,25 +134,22 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <verbs>
-      <li>        
+      <li>
         <verbClass>RR_Verb_ShootMultiple</verbClass>
         <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
         <hasStandardCommand>true</hasStandardCommand>
-        
-		<warmupTime>2.8</warmupTime>
+        <warmupTime>2.8</warmupTime>
         <forcedMissRadius>0</forcedMissRadius>
         <requireLineOfSight>true</requireLineOfSight>
         <minRange>6</minRange>
-        <range>50</range>			
-		
+        <range>50</range>
         <soundCast>Shot_SniperRifle</soundCast>
-		<soundCastTail>GunTail_Heavy</soundCastTail>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>156</muzzleFlashScale>
         <targetParams>
           <canTargetLocations>true</canTargetLocations>
         </targetParams>
       </li>
     </verbs>
-   </ThingDef>
-	 
-  </Defs>
+  </ThingDef>
+</Defs>

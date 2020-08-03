@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- High-explosive -->
+
+  <RecoillessRifle_Shell_HighExplosive.label>HE recoilless rifle shell</RecoillessRifle_Shell_HighExplosive.label>
+  <RecoillessRifle_Shell_HighExplosive.description>A shell filled with high explosives. Explodes when damaged.</RecoillessRifle_Shell_HighExplosive.description>
+
+  <Bullet_RecoillessRifle_Shell_HighExplosive.label>HE recoilless rifle shell</Bullet_RecoillessRifle_Shell_HighExplosive.label>
+
+
+  <!-- Cluster -->
+
+  <RecoillessRifle_Shell_Cluster.label>cluster recoilless rifle shell</RecoillessRifle_Shell_Cluster.label>
+  <RecoillessRifle_Shell_Cluster.description>A cluster bomb that contain 8 bomblets for wide area of effect.  Explodes when damaged.</RecoillessRifle_Shell_Cluster.description>
+
+  <Bullet_RecoillessRifle_Shell_Cluster.label>cluster recoilless rifle shell</Bullet_RecoillessRifle_Shell_Cluster.label>
+
+
+  <!-- White phosphorus -->
+
+  <RecoillessRifle_Shell_WP.label>WP smoke recoilless rifle shell</RecoillessRifle_Shell_WP.label>
+  <RecoillessRifle_Shell_WP.description>A smoke shell that pop smoke upon impact. Hit chance of bullets path through smoke is reduced 70%. Don't shoot it at your friends because white phosphorus is dangerous.</RecoillessRifle_Shell_WP.description>
+
+  <Bullet_RecoillessRifle_Shell_WP.label>WP recoilless rifle shell</Bullet_RecoillessRifle_Shell_WP.label>
+  <Bullet_RecoillessRifle_Shell_WP.description>A smoke shell that pop smoke upon impact. Hit chance of bullets path through smoke is reduced 70%. Don't shoot it at your friends because white phosphorus is dangerous.</Bullet_RecoillessRifle_Shell_WP.description>
+
+
+  <!-- Incendiary -->
+
+  <RecoillessRifle_Shell_Incendiary.label>incendiary recoilless rifle shell</RecoillessRifle_Shell_Incendiary.label>
+  <RecoillessRifle_Shell_Incendiary.description>A cluster bomb that contain 20 small incendiary bomb. Explodes when damaged.</RecoillessRifle_Shell_Incendiary.description>
+
+  <Bullet_RecoillessRifle_Shell_Incendiary.label>incendiary recoilless rifle shell</Bullet_RecoillessRifle_Shell_Incendiary.label>
+  <Bullet_RecoillessRifle_Shell_Incendiary.description>A cluster bomb that contain 20 small incendiary bomb. Explodes when damaged.</Bullet_RecoillessRifle_Shell_Incendiary.description>
+
+
+  <!-- EMP -->
+
+  <RecoillessRifle_Shell_EMP.label>EMP recoilless rifle shell</RecoillessRifle_Shell_EMP.label>
+  <RecoillessRifle_Shell_EMP.description>A shell filled with batteries and antennas. Electromagnetic pulses temporarily disable electrical circuits. Explodes when damaged.</RecoillessRifle_Shell_EMP.description>
+
+  <RecoillessRifle_Bullet_Shell_EMP.label>EMP recoillessRifle  shell</RecoillessRifle_Bullet_Shell_EMP.label>
+
+
+  <!-- shrapnel -->
+
+  <RecoillessRifle_Shell_Shrapnel.label>shrapnel recoilless rifle shell</RecoillessRifle_Shell_Shrapnel.label>
+  <RecoillessRifle_Shell_Shrapnel.description>A canister shell with a timed fuse. Same bullet dispersion at any distance. Explodes when damaged.</RecoillessRifle_Shell_Shrapnel.description>
+
+  <Bullet_RecoillessRifle_Shell_Shrapnel.label>shrapnel recoilless rifle shell</Bullet_RecoillessRifle_Shell_Shrapnel.label>
+
+
+  <!-- canister -->
+
+  <RecoillessRifle_Shell_Canister.label>canister recoilless rifle shell</RecoillessRifle_Shell_Canister.label>
+  <RecoillessRifle_Shell_Canister.description>A shotgun shell filled with 100 pellets. The pellets disperse at long distance. Very effective in an open field. Explodes when damaged.</RecoillessRifle_Shell_Canister.description>
+
+  <Bullet_RecoillessRifle_Shell_Canister.label>canister recoilless rifle shell</Bullet_RecoillessRifle_Shell_Canister.label>
+
+
+  <!-- HEAT -->
+
+  <RecoillessRifle_Shell_HEAT.label>HEAT recoilless rifle shell</RecoillessRifle_Shell_HEAT.label>
+  <RecoillessRifle_Shell_HEAT.description>A high-explosive-anti-tank shell. Deals extra damage on direct hit. Explodes when damaged.</RecoillessRifle_Shell_HEAT.description>
+
+  <Bullet_RecoillessRifle_Shell_HEAT.label>HEAT recoilless rifle shell</Bullet_RecoillessRifle_Shell_HEAT.label>
+  <Bullet_RecoillessRifle_Shell_HEAT.description>A high-explosive-anti-tank shell. Deals extra damage on direct hit. Explodes when damaged.</Bullet_RecoillessRifle_Shell_HEAT.description>
+
+
+  <!-- AP -->
+
+  <RecoillessRifle_Shell_AP.label>AP recoilless rifle shell</RecoillessRifle_Shell_AP.label>
+  <RecoillessRifle_Shell_AP.description>An Armor piercing shell with extra propellant for higher muzzle velocity.</RecoillessRifle_Shell_AP.description>
+
+  <Bullet_RecoillessRifle_Shell_AP.label>AP recoilless_rifle shell</Bullet_RecoillessRifle_Shell_AP.label>
+  <Bullet_RecoillessRifle_Shell_AP.description>An Armor piercing shell with extra propellant for higher muzzle velocity.</Bullet_RecoillessRifle_Shell_AP.description>
+
+
+  <!-- APDS -->
+
+  <RecoillessRifle_Shell_APDS.label>APDS recoilless rifle shell</RecoillessRifle_Shell_APDS.label>
+  <RecoillessRifle_Shell_APDS.description>An Armor piercing discarding sabot shell.Armour penetration is increased by concentrating the force of a shell into as small an area as possible.</RecoillessRifle_Shell_APDS.description>
+
+  <Bullet_RecoillessRifle_Shell_Sabot.label>Sabot recoilless_rifle shell</Bullet_RecoillessRifle_Shell_Sabot.label>
+  <Bullet_RecoillessRifle_Shell_Sabot.description>An Armor piercing discarding sabot shell. much greater muzzle velocity.</Bullet_RecoillessRifle_Shell_Sabot.description>
+
+
+</LanguageData>

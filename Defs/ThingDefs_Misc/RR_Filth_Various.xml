@@ -1,7 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-  
   <ThingDef ParentName="BaseFilth">
     <defName>RR_FilthNonFlamableAsh</defName>
     <label>ash</label>
@@ -14,10 +12,10 @@
       <color>(255, 255, 255, 220)</color>
     </graphicData>
     <filth>
-       <rainWashes>true</rainWashes>
+      <rainWashes>true</rainWashes>
       <cleaningWorkToReduceThickness>1</cleaningWorkToReduceThickness>
       <canFilthAttach>true</canFilthAttach>
       <allowsFire>false</allowsFire>
-  </filth>
+    </filth>
   </ThingDef>
 </Defs>

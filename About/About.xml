@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-
-    <name>Recoilless Rifle (Continued)</name>
-  	<packageId>Mlie.RecoillessRifle</packageId>
-	<author>match_milk</author>
-	<url>https://github.com/emipa606/RecoillessRifle</url>
-	<supportedVersions>
-		<li>1.1</li>
-	</supportedVersions>
-	<modDependencies />
-	<loadAfter />
-	<description>Update of match_milks mod for RimWorld 1.1
+  <name>Recoilless Rifle (Continued)</name>
+  <packageId>Mlie.RecoillessRifle</packageId>
+  <author>match_milk</author>
+  <url>https://github.com/emipa606/RecoillessRifle</url>
+  <supportedVersions>
+    <li>1.1</li>
+    <li>1.2</li>
+  </supportedVersions>
+  <modDependencies />
+  <loadAfter />
+  <description>Update of match_milks mod for RimWorld 1.1
 https://steamcommunity.com/sharedfiles/filedetails/?id=1279933594
 
 [img]https://raw.githubusercontent.com/emipa606/RimWorld-Wrapper/master/Notice.png[/img]
@@ -54,5 +54,4 @@ smoke is reduced 70%. Can be used to burn people as well.
 -------------------------------------Compatiblity-----------------------------------------------------
 not compatible Combat extended
 compatible with most of other mods and exisitent save data.</description>
-
 </ModMetaData>
