@@ -1,30 +1,21 @@
 # RecoillessRifle
 
-![Image](https://i.imgur.com/WAEzk68.png)
+![Image](https://i.imgur.com/buuPQel.png)
 
 Update of match_milks mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=1279933594
 
-![Image](https://i.imgur.com/7Gzt3Rg.png)
+![Image](https://i.imgur.com/pufA0kM.png)
 
-
-[table]
-	[tr]
-		[td]https://invite.gg/Mlie]![Image](https://i.imgur.com/zdzzBrc.png)
-[/td]
-		[td]https://github.com/emipa606/RecoillessRifle]![Image](https://i.imgur.com/kTkpTOE.png)
-[/td]
-	[/tr]
-[/table]
 	
-![Image](https://i.imgur.com/NOW7jU1.png)
+![Image](https://i.imgur.com/Z4GOv8H.png)
 
 
 adds a recoilless rifle turret that can shoot various shell. you can build it after you research mortar.
 
 [Recoilless rifle]
 	:		Need to be manned.
-	:		Can&apos;t fire over wall.
+	:		Can't fire over wall.
 	:		Low muzzle velocity.
 	:		Build cost : 100 Steel , 3 Components.
 					    
@@ -56,7 +47,7 @@ adds a recoilless rifle turret that can shoot various shell. you can build it af
         compatible with most of other mods and exisitent save data.
 
 
-![Image](https://i.imgur.com/Rs6T6cr.png)
+![Image](https://i.imgur.com/PwoNOj4.png)
 
 
 
@@ -66,6 +57,7 @@ adds a recoilless rifle turret that can shoot various shell. you can build it af
 -  For best support, please use the Discord-channel for error-reporting.
 -  Do not report errors by making a discussion-thread, I get no notification of that.
 -  If you have the solution for a problem, please post it to the GitHub repository.
+
 
 
 
