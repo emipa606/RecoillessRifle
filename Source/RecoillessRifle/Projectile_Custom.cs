@@ -159,7 +159,6 @@ public class Projectile_Custom : Projectile
         }
 
         var position = Position;
-        var map2 = map;
         var explosionRadius = def.projectile.explosionRadius;
         var damageDef = def.projectile.damageDef;
         var instigator = launcher;
@@ -171,7 +170,7 @@ public class Projectile_Custom : Projectile
         var postExplosionSpawnChance = def.projectile.postExplosionSpawnChance;
         var postExplosionSpawnThingCount = def.projectile.postExplosionSpawnThingCount;
         var preExplosionSpawnThingDef = def.projectile.preExplosionSpawnThingDef;
-        GenExplosion.DoExplosion(position, map2, explosionRadius, damageDef, instigator, damageAmountBase, -1,
+        GenExplosion.DoExplosion(position, map, explosionRadius, damageDef, instigator, damageAmountBase, -1,
             soundExplode, thingDef, projectile, null, postExplosionSpawnThingDef, postExplosionSpawnChance,
             postExplosionSpawnThingCount, def.projectile.postExplosionGasType,
             def.projectile.applyDamageToExplosionCellsNeighbors,

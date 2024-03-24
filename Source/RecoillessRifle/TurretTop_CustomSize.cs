@@ -3,7 +3,7 @@ using Verse;
 
 namespace RecoillessRifle;
 
-public class TurretTop_CustomSize
+public class TurretTop_CustomSize(Building_TurretGunCustom ParentTurret)
 {
     private const float IdleTurnDegreesPerTick = 0.26f;
 
@@ -13,8 +13,6 @@ public class TurretTop_CustomSize
 
     private const int IdleTurnIntervalMax = 350;
 
-    private readonly Building_TurretGunCustom parentTurret;
-
     private float curRotationInt;
 
     private bool idleTurnClockwise;
@@ -22,11 +20,6 @@ public class TurretTop_CustomSize
     private int idleTurnTicksLeft;
 
     private int ticksUntilIdleTurn;
-
-    public TurretTop_CustomSize(Building_TurretGunCustom ParentTurret)
-    {
-        parentTurret = ParentTurret;
-    }
 
     private float CurRotation
     {
@@ -48,12 +41,12 @@ public class TurretTop_CustomSize
 
     public void TurretTopTick()
     {
-        var currentTarget = parentTurret.CurrentTarget;
+        var currentTarget = ParentTurret.CurrentTarget;
         var isValid = currentTarget.IsValid;
         if (isValid)
         {
-            CurRotation = (currentTarget.Cell.ToVector3Shifted() - parentTurret.DrawPos).AngleFlat();
-            ticksUntilIdleTurn = Rand.RangeInclusive(150, 350);
+            CurRotation = (currentTarget.Cell.ToVector3Shifted() - ParentTurret.DrawPos).AngleFlat();
+            ticksUntilIdleTurn = Rand.RangeInclusive(IdleTurnIntervalMin, IdleTurnIntervalMax);
         }
         else
         {
@@ -67,23 +60,23 @@ public class TurretTop_CustomSize
 
                 idleTurnClockwise = Rand.Value < 0.5;
 
-                idleTurnTicksLeft = 140;
+                idleTurnTicksLeft = IdleTurnDuration;
             }
             else
             {
                 if (idleTurnClockwise)
                 {
-                    CurRotation += 0.26f;
+                    CurRotation += IdleTurnDegreesPerTick;
                 }
                 else
                 {
-                    CurRotation -= 0.26f;
+                    CurRotation -= IdleTurnDegreesPerTick;
                 }
 
                 idleTurnTicksLeft--;
                 if (idleTurnTicksLeft <= 0)
                 {
-                    ticksUntilIdleTurn = Rand.RangeInclusive(150, 350);
+                    ticksUntilIdleTurn = Rand.RangeInclusive(IdleTurnIntervalMin, IdleTurnIntervalMax);
                 }
             }
         }
@@ -92,8 +85,8 @@ public class TurretTop_CustomSize
     public void DrawTurret()
     {
         var matrix4x = default(Matrix4x4);
-        matrix4x.SetTRS(parentTurret.DrawPos + Altitudes.AltIncVect, CurRotation.ToQuat(),
-            parentTurret.TopSizeComp?.Props.topSize ?? Vector3.one);
-        Graphics.DrawMesh(MeshPool.plane20, matrix4x, parentTurret.def.building.turretTopMat, 0);
+        matrix4x.SetTRS(ParentTurret.DrawPos + Altitudes.AltIncVect, CurRotation.ToQuat(),
+            ParentTurret.TopSizeComp?.Props.topSize ?? Vector3.one);
+        Graphics.DrawMesh(MeshPool.plane20, matrix4x, ParentTurret.def.building.turretTopMat, 0);
     }
 }

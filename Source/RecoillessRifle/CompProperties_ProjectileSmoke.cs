@@ -4,7 +4,7 @@ namespace RecoillessRifle;
 
 public class CompProperties_ProjectileSmoke : CompProperties
 {
-    public float smokepopRadius = 1f;
+    public readonly float smokepopRadius = 1f;
 
     public CompProperties_ProjectileSmoke()
     {

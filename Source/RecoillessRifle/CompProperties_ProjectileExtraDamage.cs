@@ -6,11 +6,11 @@ namespace RecoillessRifle;
 
 public class CompProperties_ProjectileExtraDamage : CompProperties
 {
-    public int damageAmountBase = 1;
+    public readonly int damageAmountBase = 1;
+
+    public readonly string hitText = "RR_Hit";
 
     public DamageDef damageDef;
-
-    public string hitText = "RR_Hit";
 
     public Color hitTextColor = new Color32(byte.MaxValue, 153, 102, byte.MaxValue);
 

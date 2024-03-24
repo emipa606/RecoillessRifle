@@ -133,7 +133,7 @@ public class RR_Verb_LaunchMultipleProjectile : Verb
                     }
 
                     var drawPos = caster.DrawPos;
-                    var unused = (Projectile)GenSpawn.Spawn(projectile, shootLine.Source, caster.Map);
+                    _ = (Projectile)GenSpawn.Spawn(projectile, shootLine.Source, caster.Map);
                     var num = PelletsPerShot(projectile);
                     if (num < 1)
                     {
@@ -229,7 +229,7 @@ public class RR_Verb_LaunchMultipleProjectile : Verb
                                 MoteMaker.ThrowText(caster.DrawPos, caster.Map, "ToWild");
                             }
 
-                            array2[j].ChangeDestToMissWild(shotReport.AimOnTargetChance);
+                            array2[j].ChangeDestToMissWild(shotReport.AimOnTargetChance, caster.Map);
                             var hasThing2 = currentTarget.HasThing;
                             if (hasThing2)
                             {
