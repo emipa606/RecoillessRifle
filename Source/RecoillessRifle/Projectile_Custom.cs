@@ -7,9 +7,9 @@ namespace RecoillessRifle;
 
 public class Projectile_Custom : Projectile
 {
-    protected CompProjectileExtraDamage extraDamageComp;
+    private CompProjectileExtraDamage extraDamageComp;
 
-    protected CompProjectileSmoke smokepopComp;
+    private CompProjectileSmoke smokepopComp;
 
     private int ticksToDetonation;
 
@@ -26,7 +26,7 @@ public class Projectile_Custom : Projectile
         smokepopComp = GetComp<CompProjectileSmoke>();
     }
 
-    public override void Tick()
+    protected override void Tick()
     {
         base.Tick();
         if (ticksToDetonation <= 0)
@@ -107,9 +107,9 @@ public class Projectile_Custom : Projectile
     protected virtual void ImpactDirectly(Thing hitThing, Map map)
     {
         base.Impact(hitThing);
-        var battleLogEntry_RangedImpact = new BattleLogEntry_RangedImpact(launcher, hitThing,
+        var battleLogEntryRangedImpact = new BattleLogEntry_RangedImpact(launcher, hitThing,
             intendedTarget.Thing, equipmentDef, def, targetCoverDef);
-        Find.BattleLog.Add(battleLogEntry_RangedImpact);
+        Find.BattleLog.Add(battleLogEntryRangedImpact);
         if (hitThing != null)
         {
             var damageAmountBase = def.projectile.GetDamageAmount(launcher);
@@ -118,7 +118,7 @@ public class Projectile_Custom : Projectile
             var instigator = launcher;
             var thingDef = equipmentDef;
             var damageInfo = new DamageInfo(damageDef, damageAmountBase, 0, y, instigator, null, thingDef);
-            hitThing.TakeDamage(damageInfo).AssociateWithLog(battleLogEntry_RangedImpact);
+            hitThing.TakeDamage(damageInfo).AssociateWithLog(battleLogEntryRangedImpact);
         }
         else
         {
@@ -172,7 +172,7 @@ public class Projectile_Custom : Projectile
         var preExplosionSpawnThingDef = def.projectile.preExplosionSpawnThingDef;
         GenExplosion.DoExplosion(position, map, explosionRadius, damageDef, instigator, damageAmountBase, -1,
             soundExplode, thingDef, projectile, null, postExplosionSpawnThingDef, postExplosionSpawnChance,
-            postExplosionSpawnThingCount, def.projectile.postExplosionGasType,
+            postExplosionSpawnThingCount, def.projectile.postExplosionGasType, null, 0,
             def.projectile.applyDamageToExplosionCellsNeighbors,
             preExplosionSpawnThingDef, def.projectile.preExplosionSpawnChance,
             def.projectile.preExplosionSpawnThingCount, def.projectile.explosionChanceToStartFire,

@@ -5,7 +5,7 @@ namespace Verse;
 
 public class RR_Verb_LaunchMultipleProjectile : Verb
 {
-    public virtual ThingDef Projectile
+    protected virtual ThingDef Projectile
     {
         get
         {
@@ -19,7 +19,7 @@ public class RR_Verb_LaunchMultipleProjectile : Verb
         }
     }
 
-    public int PelletsPerShot(ThingDef projectile)
+    private static int pelletsPerShot(ThingDef projectile)
     {
         if (projectile.comps == null)
         {
@@ -41,7 +41,7 @@ public class RR_Verb_LaunchMultipleProjectile : Verb
         return 1;
     }
 
-    public float ForsedScatterRadius(ThingDef projectile)
+    private static float forcedScatterRadius(ThingDef projectile)
     {
         if (projectile.comps == null)
         {
@@ -63,7 +63,7 @@ public class RR_Verb_LaunchMultipleProjectile : Verb
         return 0f;
     }
 
-    public float ScatterRadiusAt10tilesAway(ThingDef projectile)
+    private static float scatterRadiusAt10TilesAway(ThingDef projectile)
     {
         if (projectile.comps == null)
         {
@@ -134,7 +134,7 @@ public class RR_Verb_LaunchMultipleProjectile : Verb
 
                     var drawPos = caster.DrawPos;
                     _ = (Projectile)GenSpawn.Spawn(projectile, shootLine.Source, caster.Map);
-                    var num = PelletsPerShot(projectile);
+                    var num = pelletsPerShot(projectile);
                     if (num < 1)
                     {
                         num = 1;
@@ -146,12 +146,11 @@ public class RR_Verb_LaunchMultipleProjectile : Verb
                     {
                         TryFindShootLineFromTo(caster.Position, currentTarget, out array2[i]);
                         array[i] = (Projectile)GenSpawn.Spawn(projectile, array2[i].Source, caster.Map);
-                        //array[i].FreeIntercept = (this.canFreeInterceptNow && !array[i].def.projectile.flyOverhead);
                     }
 
                     var num2 = (currentTarget.Cell - caster.Position).LengthHorizontal;
-                    var num3 = ScatterRadiusAt10tilesAway(projectile) * num2 / 10f;
-                    var num4 = verbProps.ForcedMissRadius + ForsedScatterRadius(projectile) + num3;
+                    var num3 = scatterRadiusAt10TilesAway(projectile) * num2 / 10f;
+                    var num4 = verbProps.ForcedMissRadius + forcedScatterRadius(projectile) + num3;
                     var j = 0;
                     while (j < num)
                     {
@@ -197,7 +196,6 @@ public class RR_Verb_LaunchMultipleProjectile : Verb
                             if (hasThing)
                             {
                                 array[j].HitFlags = ProjectileHitFlags.All;
-                                //array[j].ThingToNeverIntercept = this.currentTarget.Thing;
                             }
 
                             if (!array[j].def.projectile.flyOverhead)
@@ -213,7 +211,6 @@ public class RR_Verb_LaunchMultipleProjectile : Verb
                         {
                             array[j].Launch(thing, drawPos, new LocalTargetInfo(currentTarget.Cell), currentTarget,
                                 equipment: thing2, hitFlags: array[j].HitFlags);
-                            //array[j].Launch(thing, drawPos, this.currentTarget.Cell, thing2, this.currentTarget.Thing);
                         }
 
                         IL_6D8:
@@ -229,23 +226,20 @@ public class RR_Verb_LaunchMultipleProjectile : Verb
                                 MoteMaker.ThrowText(caster.DrawPos, caster.Map, "ToWild");
                             }
 
-                            array2[j].ChangeDestToMissWild(shotReport.AimOnTargetChance, caster.Map);
+                            array2[j].ChangeDestToMissWild(shotReport.AimOnTargetChance, false, caster.Map);
                             var hasThing2 = currentTarget.HasThing;
                             if (hasThing2)
                             {
                                 array[j].HitFlags = ProjectileHitFlags.All;
-                                //array[j].ThingToNeverIntercept = this.currentTarget.Thing;
                             }
 
                             if (!array[j].def.projectile.flyOverhead)
                             {
                                 array[j].HitFlags = ProjectileHitFlags.IntendedTarget;
-                                //array[j].InterceptWalls = true;
                             }
 
                             array[j].Launch(thing, drawPos, new LocalTargetInfo(array2[j].Dest), currentTarget,
                                 equipment: thing2, hitFlags: array[j].HitFlags);
-                            //array[j].Launch(thing, drawPos, array2[j].Dest, thing2, this.currentTarget.Thing);
                             goto IL_6D8;
                         }
 
@@ -268,7 +262,6 @@ public class RR_Verb_LaunchMultipleProjectile : Verb
 
                                 array[j].Launch(thing, drawPos, new LocalTargetInfo(randomCoverToMissInto),
                                     currentTarget, equipment: thing2, hitFlags: array[j].HitFlags);
-                                //array[j].Launch(thing, drawPos, randomCoverToMissInto, thing2, this.currentTarget.Thing);
                                 goto IL_6D8;
                             }
                         }

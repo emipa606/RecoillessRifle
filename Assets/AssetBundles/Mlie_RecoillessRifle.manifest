@@ -1,0 +1,40 @@
+ManifestFileVersion: 0
+CRC: 3297385279
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 47b7da55263d74a3cdf40200afc08264
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 2612ac43db082a73502ee80f2eceb73f
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 47b7da55263d74a3cdf40200afc08264
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Data/Mlie.RecoillessRifle/Textures/RR/projectile/ShellIncendiarySmall.png
+- Assets/Data/Mlie.RecoillessRifle/Textures/RR/shell/ShellHE.png
+- Assets/Data/Mlie.RecoillessRifle/Textures/RR/shell/ShellAP.png
+- Assets/Data/Mlie.RecoillessRifle/Textures/RR/shell/ShellIncendiary.png
+- Assets/Data/Mlie.RecoillessRifle/Textures/RR/shell/ShellSabot.png
+- Assets/Data/Mlie.RecoillessRifle/Textures/RR/shell/ShellEMP.png
+- Assets/Data/Mlie.RecoillessRifle/Textures/RR/projectile/ShellBomb.png
+- Assets/Data/Mlie.RecoillessRifle/Textures/RR/projectile/ShellSmallBomb.png
+- Assets/Data/Mlie.RecoillessRifle/Textures/RR/turret/TurretImprovised.png
+- Assets/Data/Mlie.RecoillessRifle/Textures/RR/shell/ShellShrapnel.png
+- Assets/Data/Mlie.RecoillessRifle/Textures/RR/turret/TurretTop_PVPJ110.png
+- Assets/Data/Mlie.RecoillessRifle/Textures/RR/projectile/ShellIncendiary.png
+- Assets/Data/Mlie.RecoillessRifle/Textures/RR/shell/ShellCluster.png
+- Assets/Data/Mlie.RecoillessRifle/Textures/RR/projectile/ShellWP.png
+- Assets/Data/Mlie.RecoillessRifle/Textures/RR/projectile/ShellEMP.png
+- Assets/Data/Mlie.RecoillessRifle/Textures/RR/shell/ShellHEAT.png
+- Assets/Data/Mlie.RecoillessRifle/Textures/RR/shell/ShellCanister.png
+- Assets/Data/Mlie.RecoillessRifle/Textures/RR/turret/TurretUI.png
+- Assets/Data/Mlie.RecoillessRifle/Textures/RR/shell/ShellWP.png
+- Assets/Data/Mlie.RecoillessRifle/Textures/RR/projectile/ShellBigdart.png
+- Assets/Data/Mlie.RecoillessRifle/Textures/RR/projectile/ShellHEAT.png
+Dependencies: []

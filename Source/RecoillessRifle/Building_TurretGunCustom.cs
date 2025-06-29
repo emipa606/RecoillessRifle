@@ -9,7 +9,7 @@ public class Building_TurretGunCustom : Building_TurretGun
 {
     private const int TryStartShootSomethingIntervalTicks = 10;
 
-    protected new readonly TurretTop_CustomSize top;
+    private new readonly TurretTop_CustomSize top;
 
     protected bool hasGainedLoadcount = false;
 
@@ -17,19 +17,17 @@ public class Building_TurretGunCustom : Building_TurretGun
 
     protected int lastLoadcount = 0;
 
-    protected CompTurretTopSize topSizeComp;
-
     public Building_TurretGunCustom()
     {
         top = new TurretTop_CustomSize(this);
     }
 
-    public CompTurretTopSize TopSizeComp => topSizeComp;
+    public CompTurretTopSize TopSizeComp { get; private set; }
 
     private bool WarmingUp => burstWarmupTicksLeft > 0;
 
-    public bool CanSetForcedTarget => mannableComp != null && (Faction == Faction.OfPlayer || MannedByColonist) &&
-                                      !MannedByNonColonist;
+    private bool CanSetForcedTarget => mannableComp != null && (Faction == Faction.OfPlayer || MannedByColonist) &&
+                                       !MannedByNonColonist;
 
     private bool CanToggleHoldFire => (Faction == Faction.OfPlayer || MannedByColonist) && !MannedByNonColonist;
 
@@ -42,15 +40,15 @@ public class Building_TurretGunCustom : Building_TurretGun
     public override void SpawnSetup(Map map, bool respawningAfterLoad)
     {
         base.SpawnSetup(map, respawningAfterLoad);
-        topSizeComp = GetComp<CompTurretTopSize>();
+        TopSizeComp = GetComp<CompTurretTopSize>();
     }
 
-    public override void Tick()
+    protected override void Tick()
     {
         base.Tick();
         if (forcedTarget.IsValid && !CanSetForcedTarget)
         {
-            ResetForcedTarget();
+            resetForcedTarget();
         }
 
         if (!CanToggleHoldFire)
@@ -61,7 +59,7 @@ public class Building_TurretGunCustom : Building_TurretGun
         var thingDestroyed = forcedTarget.ThingDestroyed;
         if (thingDestroyed)
         {
-            ResetForcedTarget();
+            resetForcedTarget();
         }
 
         if ((powerComp == null || powerComp.PowerOn) && (mannableComp == null || mannableComp.MannedNow) &&
@@ -99,35 +97,11 @@ public class Building_TurretGunCustom : Building_TurretGun
         }
         else
         {
-            ResetCurrentTarget();
+            resetCurrentTarget();
         }
     }
 
-    private bool IsValidTarget(Thing t)
-    {
-        if (t is not Pawn pawn)
-        {
-            return true;
-        }
-
-        if (GunCompEq.PrimaryVerb.ProjectileFliesOverhead())
-        {
-            var roofDef = Map.roofGrid.RoofAt(t.Position);
-            if (roofDef is { isThickRoof: true })
-            {
-                return false;
-            }
-        }
-
-        if (mannableComp == null)
-        {
-            return false;
-        }
-
-        return !pawn.RaceProps.Animal || pawn.Faction != Faction.OfPlayer;
-    }
-
-    private void ResetForcedTarget()
+    private void resetForcedTarget()
     {
         forcedTarget = LocalTargetInfo.Invalid;
         burstWarmupTicksLeft = 0;
@@ -137,17 +111,7 @@ public class Building_TurretGunCustom : Building_TurretGun
         }
     }
 
-    private void UpdateGunVerbs()
-    {
-        var allVerbs = gun.TryGetComp<CompEquippable>().AllVerbs;
-        foreach (var verb in allVerbs)
-        {
-            verb.caster = this;
-            verb.castCompleteCallback = BurstComplete;
-        }
-    }
-
-    private void ResetCurrentTarget()
+    private void resetCurrentTarget()
     {
         currentTargetInt = LocalTargetInfo.Invalid;
         burstWarmupTicksLeft = 0;
