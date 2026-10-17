@@ -26,8 +26,9 @@ public class Building_TurretGunCustom : Building_TurretGun
 
     private bool WarmingUp => burstWarmupTicksLeft > 0;
 
-    private bool CanSetForcedTarget => mannableComp != null && (Faction == Faction.OfPlayer || MannedByColonist) &&
-                                       !MannedByNonColonist;
+    protected override bool CanSetForcedTarget =>
+        mannableComp != null && (Faction == Faction.OfPlayer || MannedByColonist) &&
+        !MannedByNonColonist;
 
     private bool CanToggleHoldFire => (Faction == Faction.OfPlayer || MannedByColonist) && !MannedByNonColonist;
 
